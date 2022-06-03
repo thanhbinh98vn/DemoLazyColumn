@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DemoColumn() {
     var items by remember {
-        mutableStateOf(listOf("Kotlin", "Java", "Python", "Go", "C++"))
+        mutableStateOf(listOf("1", "2", "3", "4", "5"))
     }
     LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         items(items = items, key = { it }) {
@@ -43,7 +43,7 @@ fun DemoColumn() {
                     .fillMaxWidth()
                     .background(Color.LightGray)
                     .padding(24.dp)
-                ,text = "I like $it")
+                ,text = it)
         }
         item {
             Button(modifier = Modifier
